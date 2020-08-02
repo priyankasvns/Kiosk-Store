@@ -1,0 +1,43 @@
+﻿<Window x:Class="FinalExamProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalExamProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="420" Width="1150">
+    <Grid>
+        <ComboBox x:Name="itemListComboBox" HorizontalAlignment="Left" Margin="221,62,0,0" VerticalAlignment="Top" Width="146" IsReadOnly="True" SelectionChanged="ItemListComboBox_SelectionChanged"/>
+        <Label x:Name="itemType" Content="Select an Item from the list:" HorizontalAlignment="Left" Margin="59,58,0,0" VerticalAlignment="Top"/>
+        <Label Content="Item Number" HorizontalAlignment="Left" Margin="38,106,0,0" VerticalAlignment="Top" Width="80" Height="25"/>
+        <Label Content="Item Cost(in $)" HorizontalAlignment="Left" Margin="146,106,0,0" VerticalAlignment="Top" Width="91" Height="25"/>
+        <Label Content="Item Weight(in kgs)" HorizontalAlignment="Left" Margin="253,106,0,0" VerticalAlignment="Top" Width="114" Height="25"/>
+        <Label x:Name="lblItemName" Content="Enter the Item Name:" HorizontalAlignment="Left" Margin="71,172,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblItemNumber" Content="" HorizontalAlignment="Left" Margin="59,137,0,0" VerticalAlignment="Top" Width="30" Height="25"/>
+        <Label x:Name="lblItemCost" Content="" HorizontalAlignment="Left" Margin="170,137,0,0" VerticalAlignment="Top" Width="30" Height="25"/>
+        <Label x:Name="lblItemWeight" Content="" HorizontalAlignment="Left" Margin="289,137,0,0" VerticalAlignment="Top" Width="30" Height="25"/>
+        <Label x:Name="lblTireModelName" Content="Tire Model Name" HorizontalAlignment="Left" Margin="75,218,0,0" VerticalAlignment="Top" Width="106" Height="25" Visibility="Hidden"/>
+        <Label x:Name="lblWheelDiameter" Content="Wheel Diameter" HorizontalAlignment="Left" Margin="76,265,0,0" VerticalAlignment="Top" Width="105" Height="25" Visibility="Hidden"/>
+        <TextBox x:Name="tbItemNameValue" HorizontalAlignment="Left" Height="23" Margin="219,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbTireModelNameValue" HorizontalAlignment="Left" Height="23" Margin="221,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="tbWheelDiameterValue" HorizontalAlignment="Left" Height="23" Margin="221,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden" Background="White"/>
+        <Button x:Name="btnSubmitItemOrder" Content="submit item order" HorizontalAlignment="Left" Margin="894,129,0,0" VerticalAlignment="Top" Width="130" Click="BtnSubmitItemOrder_Click" Height="30" Background="#FFA8E07F" FontWeight="Bold"/>
+        <Label Content="Current total price:" HorizontalAlignment="Left" Margin="835,78,0,0" VerticalAlignment="Top" Width="120" Background="#FFE4DDDD" Height="35" Padding="12,10,0,0" FontWeight="Bold"/>
+        <Label x:Name="lblTotalPrice" Content="" HorizontalAlignment="Left" Margin="956,78,0,0" VerticalAlignment="Top" Width="120" BorderThickness="1" Height="35" Background="#FFE4DDDD" Padding="20,11,0,0" FontWeight="Bold"/>
+        <Label x:Name="lblShippingCharges" Content="Shipping Charges" HorizontalAlignment="Left" Margin="474,134,0,0" VerticalAlignment="Top" Width="119" Visibility="Hidden"/>
+        <Label x:Name="lblShippingChargesValue" Content="" HorizontalAlignment="Left" Margin="607,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Hidden" BorderThickness="1" Foreground="#FFABADB3" BorderBrush="#FFABADB3" Height="25" Padding="5"/>
+        <Label x:Name="lblBatteryVoltage" Content="Battery Voltage" HorizontalAlignment="Left" Margin="75,224,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <TextBox x:Name="tbBatteryVoltageValue" HorizontalAlignment="Left" Height="23" Margin="220,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <Label x:Name="lblShippingAvailable" Content="Shipping available" HorizontalAlignment="Left" Margin="476,94,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <RadioButton x:Name="rbShippingChargesYes" Content="Yes" HorizontalAlignment="Left" Margin="607,100,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="RbShippingChargesYes_Checked"/>
+        <RadioButton x:Name="rbShippingChargesNo" Content="No" HorizontalAlignment="Left" Margin="683,100,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="RbShippingChargesNo_Checked"/>
+        <Label x:Name="lblWiperLength" Content="Wiper Length" HorizontalAlignment="Left" Margin="71,224,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <TextBox x:Name="tbWiperLengthValue" HorizontalAlignment="Left" Height="25" Margin="221,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <Button x:Name="btnSaveItemHistory" Content="Save item history" HorizontalAlignment="Left" Margin="896,207,0,0" VerticalAlignment="Top" Width="130" Height="30" Click="BtnSaveItemHistory_Click" Background="#FFD4D780" FontWeight="Bold"/>
+        <Button x:Name="btnLoadItemHistory" Content="Load item history" HorizontalAlignment="Left" Margin="894,261,0,0" VerticalAlignment="Top" Width="130" Height="30" Click="BtnLoadItemHistory_Click" Background="#FF50B6EB" FontWeight="Bold"/>
+        <Button x:Name="btnLinq1" Content="Most Purchased Item" HorizontalAlignment="Left" Margin="895,316,0,0" VerticalAlignment="Top" Width="130" Height="30" Click="BtnLinq1_Click" Background="#FFABA4EA" FontWeight="Bold"/>
+        <Label Content="Automative Store" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1144" Background="#FFD7AAED" FontSize="20" HorizontalContentAlignment="Center" FontStretch="UltraExpanded" FontWeight="Bold" FontStyle="Italic" FontFamily="Comic Sans MS" Margin="0,2,0,0"/>
+        <Label Content="$" HorizontalAlignment="Left" Margin="962,83,0,0" VerticalAlignment="Top" FontSize="14"/>
+
+    </Grid>
+</Window>
